@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".DetailsActivity">
-    <android.support.constraint.ConstraintLayout
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
@@ -21,7 +21,7 @@
             app:srcCompat="@drawable/infinity_war_background" />
 
         <ImageView
-            android:id="@+id/movie_image"
+            android:id="@+id/movie_main_image"
             android:layout_width="@dimen/main_image_width"
             android:layout_height="@dimen/main_image_height"
             android:layout_marginStart="8dp"
@@ -40,8 +40,8 @@
             android:text="@string/infinity_war_title"
             android:textColor="@android:color/holo_purple"
             android:textStyle="bold"
-            app:layout_constraintStart_toEndOf="@+id/movie_image"
-            app:layout_constraintTop_toTopOf="@+id/movie_image" />
+            app:layout_constraintStart_toEndOf="@+id/movie_main_image"
+            app:layout_constraintTop_toTopOf="@+id/movie_main_image" />
 
         <TextView
             android:id="@+id/movie_release"
@@ -68,7 +68,7 @@
             android:layout_marginStart="8dp"
             android:layout_marginTop="32dp"
             android:text="@string/movie_trailer"
-            app:layout_constraintStart_toEndOf="@+id/movie_image"
+            app:layout_constraintStart_toEndOf="@+id/movie_main_image"
             app:layout_constraintTop_toBottomOf="@+id/movie_release"
             android:onClick="open_trailer"/>
 
@@ -81,7 +81,7 @@
             android:text="@string/overview"
             android:textStyle="bold"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/movie_image" />
+            app:layout_constraintTop_toBottomOf="@+id/movie_main_image" />
 
         <TextView
             android:id="@+id/movie_overview_text"
@@ -92,5 +92,5 @@
             android:text="@string/infinity_war_overview"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/movie_overview" />
-    </android.support.constraint.ConstraintLayout>
-</android.support.v4.widget.NestedScrollView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>
